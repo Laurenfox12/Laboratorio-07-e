@@ -1,0 +1,9 @@
+num_uno = 8
+num_dos = 6
+print("{} + {} = {}".format(num_uno,num_dos,num_uno+num_dos))
+print("{} - {} = {}".format(num_uno,num_dos,num_uno-num_dos))
+print("{} * {} = {}".format(num_uno,num_dos,num_uno*num_dos))
+print("{} / {} = {:.2f}".format(num_uno,num_dos,num_uno/num_dos))
+print("{} % {} = {}".format(num_uno,num_dos,num_uno%num_dos))
+print("{} // {} = {}".format(num_uno,num_dos,num_uno//num_dos))
+print("{} ** {} = {}".format(num_uno,num_dos,num_uno**num_dos))

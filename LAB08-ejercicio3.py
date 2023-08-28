@@ -1,20 +1,18 @@
 import random
-import string
 
-def generar_contraseña(longitud=8):
-    caracteres = string.ascii_letters + string.digits + string.punctuation
-    while True:
-        contraseña = ''.join(random.choice(caracteres) for _ in range(longitud))
-        if (any(c.islower() for c in contraseña) and
-            any(c.isupper() for c in contraseña) and
-            any(c.isdigit() for c in contraseña) and
-            any(c in string.punctuation for c in contraseña)):
-            return contraseña
+def password():  
+    minus = "abcdefghijklmnopqrstuvwxyz"
+    mayus = minus.upper()
+    num = "1234567890"
+    simb = "@[]{}+-?¿!¡'()$#%&.,"
 
-longitud_deseada = int(input("Ingrese la longitud deseada de la contraseña: "))
-if longitud_deseada >= 8: 
-    contraseña_generada = generar_contraseña(longitud=longitud_deseada)
-    print("Contraseña generada:", contraseña_generada)
-elif longitud_deseada < 8:
-    print("La contraseña debe ser como minimo de 8 caracteres")
+    todo = minus + mayus + num + simb
+
+    longitud  = 12
+
+    muestra = random.sample(todo,longitud)
+    contraseña = "".join(muestra)
+    return contraseña
+contraseña_generada = password()
+print(contraseña_generada)
 
